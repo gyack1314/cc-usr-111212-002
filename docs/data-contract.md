@@ -1,0 +1,7 @@
+# 责任维度事件
+
+effective与fact.at为有符号逻辑整数，非日期字符串。set/inactive事件有完整属性（inactive属性为空），retract含target_event_id且其key须与最终目标一致，不再参与生效点赢家。撤回不可撤回，目标若最终不存在则保留pending并阻止该设备正式重建。撤回本身可先到。赢家依priority大、revision大、event_id按Unicode较大优先；相同属性的相邻赢家区间合并，inactive只和inactive合并。
+
+interval右端无穷用null，首事件之前unknown不创建正常维度代理键，事实dim_ref分别为unknown/inactive/正常稳定key。稳定key对key、kind、按attribute_order规范属性、合并后起点做长度前缀编码SHA256。属性仅string/null，缺字段非法；null不等空字符串。区间差异比较旧新分段后的key及状态，事实原ID和at不改。
+
+批ID与规范事件集摘要绑定。事件账保留败者、撤回和冲突，当前表只来自已接受事件。只允许新增批，不直接修改旧事件原文。

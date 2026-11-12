@@ -1,0 +1,83 @@
+{
+  "events": [
+    {
+      "event_id": "e1",
+      "kind": "set",
+      "key": "dev-a",
+      "effective": 0,
+      "priority": 1,
+      "revision": 1,
+      "attributes": {
+        "team": "north"
+      }
+    },
+    {
+      "event_id": "e2",
+      "kind": "set",
+      "key": "dev-a",
+      "effective": 30,
+      "priority": 1,
+      "revision": 1,
+      "attributes": {
+        "team": "south"
+      }
+    },
+    {
+      "event_id": "e3",
+      "kind": "set",
+      "key": "dev-a",
+      "effective": 20,
+      "priority": 2,
+      "revision": 2,
+      "attributes": {
+        "team": "south"
+      }
+    },
+    {
+      "event_id": "e4",
+      "kind": "set",
+      "key": "dev-a",
+      "effective": 30,
+      "priority": 0,
+      "revision": 1,
+      "attributes": {
+        "team": "west"
+      }
+    }
+  ],
+  "facts": [
+    {
+      "fact_id": "f1",
+      "key": "dev-a",
+      "at": -1
+    },
+    {
+      "fact_id": "f2",
+      "key": "dev-a",
+      "at": 10
+    },
+    {
+      "fact_id": "f3",
+      "key": "dev-a",
+      "at": 25
+    },
+    {
+      "fact_id": "f4",
+      "key": "dev-a",
+      "at": 35
+    }
+  ],
+  "batches": [
+    [
+      "e1",
+      "e2"
+    ],
+    [
+      "e3",
+      "e4"
+    ]
+  ],
+  "attribute_order": [
+    "team"
+  ]
+}
